@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Crear Usuario</title></head>
+<body>
+<h1>Crear Usuario</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label>Username:</label><input type="text" name="username"><br>
+  <label>Password:</label><input type="password" name="password"><br>
+  <label>Email:</label><input type="email" name="email"><br>
+  <label>Photo:</label><input type="file" name="photo"><br>
+  <input type="submit" value="Crear">
+</form>
+</body>
+</html>

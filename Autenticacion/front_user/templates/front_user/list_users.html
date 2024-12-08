@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Lista de Usuarios</title></head>
+<body>
+<h1>Lista de Usuarios</h1>
+<a href="{% url 'front_user:create_user' %}">Crear Usuario</a>
+<table border="1">
+  <tr>
+    <th>ID</th><th>Username</th><th>Email</th><th>Acciones</th>
+  </tr>
+  {% for user in users %}
+  <tr>
+    <td>{{ user.id }}</td>
+    <td>{{ user.username }}</td>
+    <td>{{ user.email }}</td>
+    <td>
+      <a href="#">Ver</a> |
+      <a href="#">Actualizar</a> |
+      <a href="#">Eliminar</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

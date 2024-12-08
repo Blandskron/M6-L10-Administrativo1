@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Actualizar Usuario</title></head>
+<body>
+<h1>Actualizar Usuario</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label>Username:</label><input type="text" name="username" value="{{ user.username }}"><br>
+  <label>Password (dejar en blanco si no se cambia):</label><input type="password" name="password"><br>
+  <label>Email:</label><input type="email" name="email" value="{{ user.email }}"><br>
+  <label>Photo:</label><input type="file" name="photo"><br>
+  <input type="submit" value="Actualizar">
+</form>
+</body>
+</html>

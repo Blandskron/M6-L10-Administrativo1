@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Eliminar Usuario</title></head>
+<body>
+<h1>Eliminar Usuario</h1>
+<p>¿Está seguro que desea eliminar al usuario {{ user.username }} con ID {{ user.id }}?</p>
+<form method="post">
+  {% csrf_token %}
+  <input type="submit" value="Eliminar">
+</form>
+<a href="{% url 'front_user:list_users' %}">Cancelar</a>
+</body>
+</html>

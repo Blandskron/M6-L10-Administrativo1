@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Detalle Usuario</title></head>
+<body>
+<h1>Detalle de Usuario</h1>
+<p>ID: {{ user.id }}</p>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+{% if user.profile and user.profile.photo %}
+  <p>Photo: <img src="{{ user.profile.photo }}" alt="Foto de perfil"></p>
+{% endif %}
+<a href="{% url 'front_user:list_users' %}">Volver a la lista</a>
+</body>
+</html>
